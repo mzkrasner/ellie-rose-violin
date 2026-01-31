@@ -43,6 +43,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Video cards - click to play
+  document.querySelectorAll('.video-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const videoId = card.dataset.videoId;
+      const videoType = card.dataset.videoType || 'vimeo';
+      
+      let embedUrl;
+      if (videoType === 'vimeo') {
+        embedUrl = `https://player.vimeo.com/video/${videoId}?autoplay=1`;
+      } else {
+        embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+      }
+      
+      const embed = document.createElement('div');
+      embed.className = 'video-embed';
+      embed.innerHTML = `<iframe src="${embedUrl}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+      
+      card.innerHTML = '';
+      card.appendChild(embed);
+      card.style.cursor = 'default';
+    });
+  });
+
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
