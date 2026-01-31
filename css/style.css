@@ -629,13 +629,13 @@ ul {
 .services-showcase {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
+  gap: var(--space-2xl);
 }
 
 .service-row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-lg);
+  gap: var(--space-md);
   align-items: center;
 }
 
@@ -658,7 +658,7 @@ ul {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  aspect-ratio: 4/5;
+  aspect-ratio: 1/1;
 }
 
 @media (min-width: 768px) {
@@ -679,18 +679,20 @@ ul {
 }
 
 .service-content {
-  padding: var(--space-md) 0;
+  text-align: center;
+  padding: var(--space-lg) var(--space-sm);
 }
 
 @media (min-width: 768px) {
   .service-content {
+    text-align: left;
     padding: var(--space-xl);
   }
 }
 
 .service-content h3 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.75rem, 5vw, 3rem);
   font-weight: 400;
   color: var(--color-white);
   margin-bottom: var(--space-sm);
@@ -698,19 +700,28 @@ ul {
 }
 
 .service-content > p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--color-text-secondary);
   margin-bottom: var(--space-md);
 }
 
+@media (min-width: 768px) {
+  .service-content > p {
+    font-size: 1.125rem;
+  }
+}
+
 .service-ideal {
   display: inline-block;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-full);
 }
 
 .events-section {
