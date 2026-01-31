@@ -301,7 +301,7 @@ ul {
 }
 
 .hero-proof {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-2xl);
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.1em;
