@@ -541,28 +541,17 @@ ul {
 
 .about-badge {
   position: absolute;
-  bottom: -20px;
+  bottom: -16px;
   right: 20px;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-sm) var(--space-md);
-  text-align: center;
-}
-
-.badge-text {
-  display: block;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-text-muted);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1rem;
 }
 
 .badge-location {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--color-white);
 }
 
@@ -600,23 +589,86 @@ ul {
   font-weight: 500;
 }
 
-.about-highlights {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.highlight {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+.about-quote {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-style: italic;
   color: var(--color-text-secondary);
-  font-size: 0.9375rem;
+  border-left: 3px solid var(--color-accent);
+  padding-left: var(--space-md);
+  margin: var(--space-md) 0;
 }
 
-.highlight svg {
-  flex-shrink: 0;
+.about-text {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.about-stats {
+  display: flex;
+  gap: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 500;
   color: var(--color-accent);
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+.as-seen-at {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.as-seen-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.as-seen-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md) var(--space-xl);
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.logo-text:hover {
+  opacity: 1;
+  color: var(--color-white);
+}
 }
 
 /* ============================================
