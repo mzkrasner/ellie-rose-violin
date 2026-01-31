@@ -9,12 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
 
-  // Add scrolled class to nav on scroll
+  // Add scrolled class to nav on scroll + back to top visibility
+  const backToTop = document.querySelector('.back-to-top');
+  
   const handleScroll = () => {
     if (window.scrollY > 50) {
       nav.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');
+    }
+    
+    // Show/hide back to top button
+    if (backToTop) {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
     }
   };
 
